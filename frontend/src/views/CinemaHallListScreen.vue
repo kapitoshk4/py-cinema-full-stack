@@ -35,7 +35,7 @@ export default {
   methods: {
     async fetchHalls () {
       try {
-        const { data: halls } = await axios.get(`${import.meta.env.VITE_API_URL}/api/cinema/cinema_halls`, {
+        const { data: halls } = await axios.get(`${import.meta.env.VITE_API_URL}/api/cinema/cinema_halls/`, {
           headers: { Authorization: `Bearer ${this.token}` }
         });
         this.halls = halls;

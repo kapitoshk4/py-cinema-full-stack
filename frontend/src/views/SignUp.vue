@@ -32,12 +32,12 @@ export default {
 
     async signUp () {
       try {
-        await this.axios.post(`${import.meta.env.VITE_API_URL}/api/user/register`, {
+        await this.axios.post(`${import.meta.env.VITE_API_URL}/api/user/register/`, {
           email: this.email,
           password: this.password
         });
 
-        const { data } = await this.axios.post(`${import.meta.env.VITE_API_URL}/api/user/token`, {
+        const { data } = await this.axios.post(`${import.meta.env.VITE_API_URL}/api/user/token/`, {
           email: this.email,
           password: this.password
         });

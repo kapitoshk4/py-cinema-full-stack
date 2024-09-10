@@ -68,7 +68,7 @@ export default {
       if (this.password) body.password = this.password;
 
       try {
-        const { data } = await this.axios.patch(`${import.meta.env.VITE_API_URL}/api/user/me`, body, config);
+        const { data } = await this.axios.patch(`${import.meta.env.VITE_API_URL}/api/user/me/`, body, config);
         this.success = !!data;
 
         this.email = '';
